@@ -1,0 +1,8 @@
+aws_region      = "us-east-1"
+instance_type   = "t2.medium"
+
+ami_id          = "ami-xxxxxxxxxxxxx"
+
+key_name        = "devops-key"
+
+public_key_path = "~/.ssh/id_rsa.pub"
