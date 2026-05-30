@@ -2,6 +2,10 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/santoshsingh7891/aws-devops-cicd-kubernetes-project)
 ![GitHub License](https://img.shields.io/github/license/santoshsingh7891/aws-devops-cicd-kubernetes-project)
 
+![Project Status](https://img.shields.io/badge/Status-Completed-success)
+![Security](https://img.shields.io/badge/Security-Enabled-brightgreen)
+![DevOps](https://img.shields.io/badge/DevOps-End--to--End-blue)
+
 # 🚀 AWS DevOps CI/CD Pipeline on AWS
 
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
@@ -109,7 +113,12 @@ aws-devops-cicd-kubernetes-project
 ├── jenkins/
 ├── architecture/
 ├── screenshots/
-└── README.md
+├── README.md
+├── .gitignore
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+└── LICENSE
 ```
 
 ---
@@ -206,10 +215,6 @@ Pipeline Stages:
 3. Push Docker Image
 4. Deploy to Kubernetes
 5. Validate Deployment
-
-Release Schedule:
-
-- Production deployment on 25th of every month
 
 ---
 
@@ -363,6 +368,18 @@ GitHub → Jenkins → Docker → Docker Hub → Kubernetes → Production
 
 ---
 
+# 🏆 Key Achievements
+
+- Provisioned AWS infrastructure using Terraform
+- Automated server configuration with Ansible
+- Containerized application using Docker
+- Built CI/CD pipeline using Jenkins
+- Deployed application on Kubernetes
+- Implemented GitHub security controls
+- Achieved end-to-end deployment automation
+
+---
+
 # ✅ Project Outcome
 
 Successfully implemented an end-to-end DevOps pipeline on AWS that:
@@ -394,6 +411,18 @@ The application was successfully exposed through Kubernetes NodePort and verifie
 
 ---
 
+# 🔒 Security Features
+
+- GitHub Branch Protection Rules
+- Pull Request Approval Workflow
+- Dependabot Security Alerts
+- Secret Scanning
+- Push Protection
+- Dependency Graph Analysis
+- Secure GitHub Repository Configuration
+
+---
+
 # 🔮 Future Enhancements
 
 - Migrate Kubernetes cluster to Amazon EKS
@@ -413,9 +442,8 @@ Santosh Singh
 Solutions Architect | Cloud & DevOps Engineer
 
 AWS | Azure | GCP | Terraform | Docker | Kubernetes | Jenkins
-Solutions Architect | Cloud & DevOps Engineer
 
 ## 🔗 Connect With Me
 
-- LinkedIn: https://www.linkedin.com/in/your-linkedin-profile
+- LinkedIn: https://linkedin.com/in/santosh-singh-141a5775
 - GitHub: https://github.com/santoshsingh7891
