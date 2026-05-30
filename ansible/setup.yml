@@ -1,0 +1,50 @@
+---
+- hosts: controller
+  become: yes
+
+  tasks:
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+
+    - name: Install Terraform
+      apt:
+        name: terraform
+        state: present
+
+    - name: Install Ansible
+      apt:
+        name: ansible
+        state: present
+
+- hosts: worker1
+  become: yes
+
+  tasks:
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+
+    - name: Install Java
+      apt:
+        name: openjdk-11-jdk
+        state: present
+
+- hosts: workers
+  become: yes
+
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Install Kubernetes Components
+      apt:
+        name:
+          - kubelet
+          - kubeadm
+          - kubectl
+        state: present
