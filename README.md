@@ -1,3 +1,7 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/santoshsingh7891/aws-devops-cicd-kubernetes-project)
+![GitHub repo size](https://img.shields.io/github/repo-size/santoshsingh7891/aws-devops-cicd-kubernetes-project)
+![GitHub License](https://img.shields.io/github/license/santoshsingh7891/aws-devops-cicd-kubernetes-project)
+
 # 🚀 AWS DevOps CI/CD Pipeline on AWS
 
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
