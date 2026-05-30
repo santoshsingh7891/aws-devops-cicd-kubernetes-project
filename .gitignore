@@ -1,0 +1,20 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Keys
+*.pem
+*.ppk
+id_rsa
+id_rsa.pub
+
+# Kubernetes
+.kube/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
