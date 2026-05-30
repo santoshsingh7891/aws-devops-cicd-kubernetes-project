@@ -24,6 +24,16 @@ The goal was to automate:
 
 using Terraform, Ansible, Docker, Jenkins, and Kubernetes.
 
+## 🎯 Project Objectives
+
+- Provision AWS infrastructure using Terraform
+- Configure servers using Ansible
+- Containerize application using Docker
+- Automate CI/CD using Jenkins
+- Deploy workloads on Kubernetes
+- Validate deployment using automated pipelines
+- Demonstrate end-to-end DevOps lifecycle
+  
 ---
 
 # 🏗 Architecture
@@ -62,9 +72,9 @@ Terraform provisions:
 - Route Tables
 - Security Groups
 - Controller Node
-- Jenkins Server
 - Kubernetes Master Node
-- Kubernetes Worker Nodes
+- Kubernetes Worker Node 1
+- Kubernetes Worker Node 2
 
 ---
 
@@ -227,29 +237,125 @@ Developer Commit
 
 # 📸 Project Screenshots
 
-## AWS Infrastructure
 
-(Add screenshot)
+## 1. Terraform Infrastructure Provisioning
 
-## Terraform Apply
+Terraform was used to provision AWS infrastructure including VPC, Subnets, Security Groups, Route Tables, and EC2 Instances.
 
-(Add screenshot)
+![Terraform Success](screenshots/terraform-success.png)
 
-## Kubernetes Cluster
+Terraform initialization completed successfully and AWS provider plugins were downloaded and configured.
 
-(Add screenshot)
+---
 
-## Jenkins Dashboard
+## 2. AWS EC2 Infrastructure
 
-(Add screenshot)
+The following EC2 instances were provisioned automatically using Terraform:
 
-## Jenkins Pipeline
+- Controller Node
+- Jenkins Server
+- Kubernetes Master Node
+- Kubernetes Worker Node 1
+- Kubernetes Worker Node 2
 
-(Add screenshot)
+![AWS EC2 Instances](screenshots/aws-ec2-instances.png)
 
-## Application Output
+---
 
-(Add screenshot)
+## 3. Controller Node Configuration
+
+The controller node was used to manage Terraform, Ansible, and deployment operations.
+
+![Controller Node](screenshots/controller-node.png)
+
+---
+
+## 4. Worker Node 1 Configuration
+
+Container runtime and Kubernetes worker components were configured successfully.
+
+![Worker Node 1](screenshots/worker-node1.png)
+
+---
+
+## 5. Worker Node 2 Configuration
+
+Second Kubernetes worker node configured for workload distribution and high availability.
+
+![Worker Node 2](screenshots/worker-node2.png)
+
+---
+
+## 6. Jenkins Setup
+
+Jenkins was installed and configured to automate the CI/CD pipeline.
+
+![Jenkins Setup](screenshots/jenkins-setup.png)
+
+Features implemented:
+
+- Source Code Checkout
+- Docker Image Build
+- Docker Image Push
+- Kubernetes Deployment
+
+---
+
+## 7. Kubernetes Master Node
+
+Kubernetes control plane was configured successfully.
+
+![Kubernetes Master](screenshots/kubernetes-master.png)
+
+The master node manages:
+
+- Scheduling
+- Cluster State
+- API Server
+- Workload Orchestration
+
+---
+
+## 8. Kubernetes Cluster Validation
+
+Cluster validation showing:
+
+- Master Node
+- Worker Node 1
+- Worker Node 2
+- Running Pods
+- Services
+
+![Kubernetes Nodes](screenshots/kubernetes-nodes.png)
+
+---
+
+## 9. Jenkins Pipeline Execution
+
+Complete CI/CD pipeline execution.
+
+Pipeline stages:
+
+1. Checkout SCM
+2. Checkout
+3. Build Docker Image
+4. Push Docker Image
+5. Deploy to Kubernetes
+6. Post Actions
+
+![Pipeline Success](screenshots/pipeline-success.png)
+
+---
+
+## 10. Application Deployment Success
+
+Final application successfully deployed and accessible through Kubernetes NodePort Service.
+
+![Application Output](screenshots/application-output.png)
+
+The application was deployed through the complete automated pipeline:
+
+GitHub → Jenkins → Docker → Docker Hub → Kubernetes → Production
 
 ---
 
