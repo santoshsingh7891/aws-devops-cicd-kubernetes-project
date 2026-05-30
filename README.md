@@ -392,11 +392,13 @@ The application was successfully exposed through Kubernetes NodePort and verifie
 
 # 🔮 Future Enhancements
 
-- EKS Deployment
-- GitHub Actions Integration
-- Monitoring with Prometheus
-- Grafana Dashboards
-- ArgoCD GitOps
+- Migrate Kubernetes cluster to Amazon EKS
+- Implement GitOps using ArgoCD
+- Integrate Prometheus and Grafana monitoring
+- Add centralized logging using ELK Stack
+- Integrate SonarQube for code quality checks
+- Configure AWS Load Balancer Controller
+- Add GitHub Actions CI/CD workflow
 
 ---
 
