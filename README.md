@@ -1,70 +1,110 @@
 # 🚀 AWS DevOps CI/CD Pipeline on AWS
 
-## 📌 Project Overview
-
-This project demonstrates a complete DevOps lifecycle implementation using:
-
-- AWS EC2
-- Terraform
-- Ansible
-- Docker
-- Jenkins
-- Kubernetes
-- GitHub
-- Docker Hub
-
-The objective was to automate infrastructure provisioning, software installation, containerization, CI/CD pipeline creation, and Kubernetes deployment.
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
+![Ansible](https://img.shields.io/badge/Ansible-Automation-red)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI/CD-green)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blue)
 
 ---
 
-## 🏗 Architecture
+# 📌 Project Overview
 
+This project demonstrates a complete DevOps lifecycle implementation on AWS.
+
+The goal was to automate:
+
+- Infrastructure Provisioning
+- Configuration Management
+- Containerization
+- Continuous Integration
+- Continuous Deployment
+- Kubernetes Orchestration
+
+using Terraform, Ansible, Docker, Jenkins, and Kubernetes.
+
+---
+
+# 🏗 Architecture
+
+```text
 Developer
-    |
- GitHub
-    |
- Jenkins
-    |
+    │
+    ▼
+ GitHub Repository
+    │
+    ▼
+ Jenkins Pipeline
+    │
+    ▼
  Docker Build
-    |
+    │
+    ▼
  Docker Hub
-    |
+    │
+    ▼
  Kubernetes Cluster
-    |
+    │
+    ▼
  Application Deployment
+```
 
 ---
 
-## 🔧 Technologies Used
+# ☁ AWS Infrastructure
 
-| Category | Tool |
-|-----------|------|
+Terraform provisions:
+
+- VPC
+- Public Subnet
+- Internet Gateway
+- Route Tables
+- Security Groups
+- Controller Node
+- Jenkins Server
+- Kubernetes Master Node
+- Kubernetes Worker Nodes
+
+---
+
+# 🔧 Technologies Used
+
+| Category | Technology |
+|-----------|------------|
 | Cloud | AWS |
 | IaC | Terraform |
 | Configuration Management | Ansible |
 | Containerization | Docker |
 | CI/CD | Jenkins |
 | Orchestration | Kubernetes |
-| Version Control | GitHub |
+| Version Control | Git & GitHub |
 | Registry | Docker Hub |
 
 ---
 
-## 📂 Repository Structure
+# 📂 Repository Structure
 
 ```text
-terraform/
-ansible/
-docker/
-kubernetes/
-jenkins/
-architecture/
-screenshots/
+aws-devops-cicd-kubernetes-project
+│
+├── terraform/
+├── ansible/
+├── docker/
+├── kubernetes/
+├── jenkins/
+├── architecture/
+├── screenshots/
+└── README.md
 ```
 
-## Terraform
+---
 
-Provisioned:
+# 🚀 Terraform
+
+Provisioned AWS infrastructure using Terraform.
+
+Resources created:
 
 - VPC
 - Subnet
@@ -73,70 +113,173 @@ Provisioned:
 - Security Groups
 - EC2 Instances
 
-## Ansible
+Commands:
 
-Configured:
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+
+---
+
+# ⚙ Ansible
+
+Automated server configuration.
+
+Installed:
 
 - Jenkins
 - Java
 - Docker
-- Kubernetes
+- Kubernetes Components
 
-## Docker
+Command:
 
-Built custom Nginx container image.
+```bash
+ansible-playbook -i inventory.ini setup.yml
+```
 
-## Kubernetes
+---
 
-Deployed application with:
+# 🐳 Docker
 
-- 2 Replicas
-- NodePort Service
+Created custom Nginx image.
+
+```dockerfile
+FROM nginx:stable-alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+```
+
+---
+
+# ☸ Kubernetes
+
+Deployment Features:
+
 - Namespace Isolation
+- 2 Replicas
+- Rolling Updates
+- NodePort Service
 
 NodePort:
 
+```text
 30008
+```
 
-## Jenkins Pipeline
+Commands:
 
-Stages:
+```bash
+kubectl apply -f namespace.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
+
+---
+
+# 🔄 Jenkins CI/CD Pipeline
+
+Pipeline Stages:
 
 1. Checkout Source Code
 2. Build Docker Image
 3. Push Docker Image
 4. Deploy to Kubernetes
-5. Rollout Validation
+5. Validate Deployment
 
-## Project Workflow
+Release Schedule:
 
-Developer Push
-      ↓
-GitHub
-      ↓
-Jenkins
-      ↓
-Docker Build
-      ↓
-Docker Hub
-      ↓
-Kubernetes
-      ↓
-Application
+- Production deployment on 25th of every month
 
-## Skills Demonstrated
+---
 
-- AWS
+# 📊 CI/CD Workflow
+
+```text
+Developer Commit
+        │
+        ▼
+      GitHub
+        │
+        ▼
+      Jenkins
+        │
+        ▼
+ Docker Image Build
+        │
+        ▼
+     Docker Hub
+        │
+        ▼
+ Kubernetes Cluster
+        │
+        ▼
+   Application Live
+```
+
+---
+
+# 📸 Project Screenshots
+
+## AWS Infrastructure
+
+(Add screenshot)
+
+## Terraform Apply
+
+(Add screenshot)
+
+## Kubernetes Cluster
+
+(Add screenshot)
+
+## Jenkins Dashboard
+
+(Add screenshot)
+
+## Jenkins Pipeline
+
+(Add screenshot)
+
+## Application Output
+
+(Add screenshot)
+
+---
+
+# 🎯 Skills Demonstrated
+
+- AWS Cloud
 - Terraform
 - Ansible
 - Docker
 - Jenkins
 - Kubernetes
-- GitOps
+- GitHub
 - CI/CD
 - Infrastructure as Code
+- Configuration Management
+- Container Orchestration
 
-## Author
+---
+
+# 🔮 Future Enhancements
+
+- EKS Deployment
+- GitHub Actions Integration
+- Monitoring with Prometheus
+- Grafana Dashboards
+- ArgoCD GitOps
+
+---
+
+# 👨‍💻 Author
 
 Santosh Singh
 
